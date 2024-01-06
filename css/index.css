@@ -1,0 +1,479 @@
+/**
+ * 重點0
+ * 把html跟body的高度設定為 100% 主要是為了符合視窗高度 
+ */
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: arial,helvetica,sans-serif,微軟正黑體;
+	margin: 0;
+}
+
+/**
+ * 重點1
+ * 讓有 fix_bg 或者有 info 類別元素，最小高度100%（會因為html,body都是100%，所以會等於視窗的高度）
+ * position 設定為 relative 對應參考區塊，裡面的元素若使用 position: absolute 會根據此區塊位置顯示
+ */
+.fixed_bg, .infos {
+	position: relative;
+	height: 100%;
+}
+
+
+/**
+ * 重點2
+ * 讓所有 fix_bg 預設設定背景圖為 不重複、size為cover，固定且位置在中間。
+ * position 設定為 relative 對應參考區塊，裡面的元素若使用 position absolute 會根據此區塊位置顯示
+ */
+.fixed_bg {
+	background-attachment: fixed;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+
+/**
+ * 重點3
+ * 若某些區塊有加入此類別，背景就會呈現指定的圖。當捲動到的時候就會呈現。
+ */
+.bg_1 {
+	background-image: url(img/home.PNG);
+	height:30vh;
+
+}
+.bg_1_1 {
+	background-image: url(img2/movieback.jpg);
+	
+}
+.love {
+	
+	max-width:400px;
+	 margin: auto;
+  	 display: block;
+	 position: relative;
+	 text-align: center;
+}
+.movielovetext{
+	margin: auto;
+	font-size: 22px;
+	justify-content: center;
+	text-align: center;
+	color: #4f4f4f;
+	
+}
+.row{
+	padding-top: 300px;
+}
+.bg_2 {
+	background-image: url(img2/JJ11.jpg);
+}
+
+.bg_3 {
+	background-image: url(img2/JJ1.jpg);
+}
+
+.bg_4 {
+	background-image: url(img2/jj2.jpg);
+}
+.bg_g {
+	background-image: url(img2/chime.jpg);
+	max-width: 100%;
+	height: 100%;
+}
+.bg_5 {background-image: url(img2/misesuu.jpg);}
+.bg_6 {background-image: url(img2/misesuu.jpg);}
+.bg_7 {background-image: url(img2/uta.jpg);}
+.bg_8 {background-image: url(img2/misesu3.jpg);
+	;}
+
+
+.color1 {
+	background-image: linear-gradient(to top, #f5f5f5, #ffffff);
+	margin-top: -0px;
+	max-width:100%
+}
+
+.color2_1 {
+	background-image: linear-gradient(to top, #f5f5f5, #ffffff);
+
+}
+.color2 {
+	background-image: url(img2/JJ1.jpg);
+}
+
+.color3 {
+	background-color: #614b4b;
+	padding:5px;
+	
+}
+.vs_1{
+	 display: flex;
+	justify-content: center; 
+	
+}
+.vcenter {
+	position: absolute;
+	left: 50%;
+	top: 80%;
+	color: #ffffff;
+	text-align: center;
+	/*以下 transform，主要是讓此元素往左移動自己本身寬度的50%，也往上左移動自己本身高度的50%，而前方所加的-xxx-前綴詞，是for不同瀏覽器的*/
+	-webkit-transform: translateX(-50%) translateY(-50%); /* Chrome, newer versions of Opera*/
+	-moz-transform: translateX(-50%) translateY(-50%); /* Firefox */
+	-ms-transform: translateX(-50%) translateY(-50%); /* nternet Explorer */
+	-o-transform: translateX(-50%) translateY(-50%); /* Old versions of Opera */
+	transform: translateX(-50%) translateY(-50%); /* 沒限制，有支援的瀏覽器就會run */
+	text-align: center; /*裡面的文字置中*/
+}
+
+.bg_3 h2{
+	text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.911);
+	font-size: 30px;
+	color: #ffffff
+}
+
+.shadow { 
+	text-shadow: 12px 12px 10px rgba(133, 116, 89, 0.9); /*文字陰影效果*/ 
+}
+.VS_title{
+	position: absolute;
+	font-size: 40px;
+	left: 50%;
+	top: 50%;
+	color: #ffffff;
+	text-align: center;
+	/*以下 transform，主要是讓此元素往左移動自己本身寬度的50%，也往上左移動自己本身高度的50%，而前方所加的-xxx-前綴詞，是for不同瀏覽器的*/
+	-webkit-transform: translateX(-50%) translateY(-50%); /* Chrome, newer versions of Opera*/
+	-moz-transform: translateX(-50%) translateY(-50%); /* Firefox */
+	-ms-transform: translateX(-50%) translateY(-50%); /* nternet Explorer */
+	-o-transform: translateX(-50%) translateY(-50%); /* Old versions of Opera */
+	transform: translateX(-50%) translateY(-50%); /* 沒限制，有支援的瀏覽器就會run */
+	text-align: center; /*裡面的文字置中*/
+	text-shadow: 8px 6px 7px rgba(175, 194, 255, 0.9); /*文字陰影效果*/ 
+	font-family:"AGENT ORANGE";
+	letter-spacing: 3px;
+}
+.VS_title_a{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	color: #ffffff;
+	text-align: center;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	font-family:"AGENT ORANGE";
+	font-size: 24px;
+	border-radius:20px  ;
+	text-shadow: 4px 3px 10px rgba(255, 107, 107, 0.9);
+	
+}
+.movie_text{
+	margin: 17%;
+	margin-bottom: 2%;
+	text-align: center;
+	color: #858585;
+	text-shadow: 2px 2px 6px rgba(248, 248, 248, 0.911);
+	
+}
+.groot{
+	
+	overflow-x: hidden;
+    position:sticky;
+    border-radius:2px  ;
+    text-align:center;
+	letter-spacing: 1px;
+	justify-content: center;
+	padding-top: 20%;
+	color: #ffffff;
+	
+}
+.aboutme{
+	background-color: #ebebeb57;
+    overflow-x: hidden;
+    position:sticky;
+    border-radius:2px  ;
+    text-align:center;
+    padding: 50px;
+	padding-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    backdrop-filter: blur(10px) ;
+}
+.text6{
+    margin: 15px;
+    color: #4f4f4f;
+    font-family: 微軟正黑體;
+
+}
+.icon ul{
+   
+    justify-content: center;
+    float: left;
+    display:contents;
+    padding: 10px 10;
+}
+.icon{
+    display:grid;
+    grid-template-columns: 5fr 1.5fr 1.5fr 1.5fr 5fr;
+   text-align: center;
+   position:sticky;
+   width: 100%;
+   line-height: 20px;
+   height: 60px;
+   border-bottom: 7px ;
+   padding: 1px 0;
+   border-left: 7px #4b3133 ; 
+}
+.icon :hover{
+    opacity: 0.5;
+}
+.title{
+    background-color: #f1efef;
+     letter-spacing: 5px;
+     margin-top:  20px;
+    
+     width: 70%;
+     margin:0px auto;
+     border-radius: 30px; 
+     margin-top: 20px;
+     margin-bottom: 20px;
+ color: #2a5abe;
+ box-shadow: 5px 5px 6px  rgba(133, 129, 129, 0.5);
+ }
+
+.text4{
+    padding-top: 20px;
+    padding-left: 0%;
+    letter-spacing:2px;
+    text-align:center;
+    margin:0px auto;
+    list-style: none;
+	color: #3b3a3a;
+}
+.text3{
+      padding: 50px; 
+	   text-align: center;
+	   margin: 0px auto; 
+	   list-style: none;
+	   padding-top: 20px; 
+	   font-size: 20px; 
+	   color: #3b3a3a;
+	   letter-spacing: 2px;
+	   line-height: 15px;
+	  
+    
+}
+.text3 h1{
+    line-height: 25px;
+    margin-top: 10px;
+	list-style: none;
+}
+.text8{
+	padding: 50px; 
+	 text-align: center;
+	 margin: 0px auto; 
+	 list-style: none;
+	 padding-top: 20px; 
+	 font-size: 20px; 
+	 color: #3b3a3a;
+	 letter-spacing: 2px;
+	 line-height: 30px;
+	 margin-top: 2%;
+	}
+.JJmovie{
+	width: 100%;
+	top:0;
+	left:0%;
+	position: sticky;
+	
+
+	
+}
+.containermovie{
+	height: 200vh;
+	position: sticky;
+	
+}
+
+
+
+.text7{
+	width: 1200px;
+    backdrop-filter: blur(4px);
+    margin: 0;
+    text-align: center;
+    color: rgb(255, 250, 253);
+    
+    font-size: 50px;
+    text-shadow: 0 0 50px rgb(68, 66, 58),0 0 12px rgb(236, 148, 170),0 0 2px #371818;
+    
+}
+
+#a1{
+	height: 60%;
+}
+.back2 img{
+    position:absolute;
+    margin: 30px;
+    float: right;
+       
+}
+.back2 audio{
+    position:absolute;
+    float: right;
+    margin-top: 20%;
+    height: 30px;
+    width: 250px;
+       
+}
+.back2 {
+    width: 80%;
+        position:absolute;
+          float:left;
+		  padding-top: 500px;
+          padding-right: 60px;
+         text-align: right;
+         
+      }
+.back2 p{
+     /* 文字在右邊 */
+   width: 500px;
+   padding: 80px 00px 0px 70px;
+   margin-left: 100px;
+   text-align: right;
+   float: right;
+   color: #fff;
+   text-shadow: 0 0 50px rgb(68, 66, 58),0 0 12px rgb(236, 148, 170),0 0 2px #371818;
+  }
+  .npp a {
+	background: #fff;
+	border: 2px solid;
+	font: inherit;
+	line-height: 25;
+	margin-left: 43%;
+	padding: 1em 4em;
+	margin-top:90%;
+	
+	
+  }
+  .npp a:hover, .npp a:focus {
+	border-color: var(--hover);
+	color: #fff;
+  }
+  .npp a{  
+	color: var(--color);
+	transition: 0.25s;
+	 text-decoration: none;
+	
+}
+.slide {
+	--color: #72a54e;
+	--hover: #53a16d;
+	list-style: none;
+	text-decoration: none;
+  }
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 15em 0 0 0 var(--hover);
+  color: #fff;
+  text-decoration: none;
+  
+}
+
+/*导航*/
+.nav_wrapper {
+	/* height: 892px; */
+	position: fixed;
+	right: 42px;
+	z-index: 99;
+	top: 185px;
+	/* padding-top: 110px; */
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-right: 1px solid rgba(255, 255, 255, .1);
+	-webkit-transition: -webkit-transform .4s linear;
+	-moz-transition: -moz-transform .4s linear;
+	transition: transform .4s linear;
+	-webkit-transform: translateX(180%);
+	-moz-transform: translateX(180%);
+	-ms-transform: translateX(180%);
+	transform: translateX(180%);
+	
+	
+}
+
+.nav_wrapper.show {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	transform: translateX(0);
+}
+
+.nav_wrapper .nav_list {
+	height: 385px;
+}
+
+.nav_wrapper .nav_list li {
+	height: 80px;
+	font-size: 19px;
+	line-height: 55px;
+	font-weight: lighter;
+	color: #963b3b;
+	opacity: .6;
+	cursor: pointer;
+	position: relative;
+	padding-right: 16px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .12s ease-in-out;
+	-moz-transition: all .12s ease-in-out;
+	list-style-type:none ;
+	transition: all .12s ease-in-out
+}
+
+.nav_wrapper .nav_list li a {
+	font-size: 16px;
+	line-height: 55px;
+	font-weight: lighter;
+	color: #3d3d3d;
+	text-shadow: 2px 1px 1px  rgb(255, 255, 255);
+	
+}
+
+.nav_wrapper .nav_list li::after {
+	content: "";
+	width: 5px;
+	height: 5px;
+	background: url(https://images.plurk.com/20L0FKAjAEZmAyfVtPRq5u.jpg) center / contain no-repeat;
+	position: absolute;
+	right: -3px;
+	top: 50%;
+	margin-top: -15px
+}
+
+
+.nav_wrapper .nav_list li.active {
+	color: #a21f20;
+	opacity: 1;
+	-webkit-filter: brightness(1.1);
+	filter: brightness(1.1)
+}
+
+.nav_wrapper .nav_list li:hover::before,
+.nav_wrapper .nav_list li.active::before {
+	content: "";
+	width: 19px;
+	height: 19px;
+	background: url(https://cdn.icon-icons.com/icons2/2030/PNG/512/right_arrow_icon_124032.png) center / 100% 100% no-repeat;
+	position: absolute;
+	top: 50%;
+	left: -35px;
+	margin-top: -20px
+}
+/*导航end*/
+/*電影的*/
+.card-stack ul li h3{
+	color: #2a5abe;
+}
